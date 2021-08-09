@@ -1,0 +1,114 @@
+{
+  "id": "c85de84e-2ba4-40ce-913c-89b95c0a5c3d",
+  "version": "2.0",
+  "name": "Selenium IDE tests",
+  "url": "https://www.sportmaster.ru",
+  "tests": [{
+    "id": "70ec30f0-8cb1-4202-b0da-2a2486129529",
+    "name": "Change city to Omsk",
+    "commands": [{
+      "id": "f7bc2c64-a4cf-401b-957b-a60db6b28a2c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70017783-9f16-4d1b-a687-89daad5ea91d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed322146-f840-4de0-926f-34b608d98813",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[data-selenium=open_city_menu]",
+      "targets": [
+        ["linkText=Москва", "linkText"],
+        ["css=.sm-header-bar__city-trigger > .dotted", "css:finder"],
+        ["xpath=//a[contains(text(),'Москва')]", "xpath:link"],
+        ["xpath=//a[@onclick='changeCityClick()']", "xpath:attributes"],
+        ["xpath=//div[@id='viewport']/div/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Москва')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6e0c167-d636-4112-9157-0d74277b5681",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[data-selenium=search_city_input]",
+      "targets": [
+        ["css=.ui-autocomplete-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='sm-popup']/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0f78e3e-16c1-42b9-9a16-68a5e6f71077",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[data-selenium=search_city_input]",
+      "targets": [
+        ["css=.ui-autocomplete-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='sm-popup']/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Омс"
+    }, {
+      "id": "e747d905-2e03-4f38-97be-bd37abb087e9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.quick_city_direct .autocomplete_placeholder #ui-id-1",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "114a6637-56ef-4a85-8ae0-7be9e4c46e3d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=г. Омск, Омская обл",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3acc543f-4b9a-4f1d-b694-8051c38758a6",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[data-selenium=search_city_select_button]",
+      "targets": [
+        ["css=.sm-button__height_29", "css:finder"],
+        ["xpath=//input[@value='OK']", "xpath:attributes"],
+        ["xpath=//div[@id='sm-popup']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[12]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0266653-2ff8-4917-b068-db2f8e2be679",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=a[data-selenium=open_city_menu]",
+      "targets": [],
+      "value": "Омск"
+    }, {
+      "id": "0cd5c321-ea9f-4799-a9b3-471b679881cf",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f41f00a0-bbf3-49a3-8bcc-51ff96ada64b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["70ec30f0-8cb1-4202-b0da-2a2486129529"]
+  }],
+  "urls": ["https://www.sportmaster.ru/"],
+  "plugins": []
+}
